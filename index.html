@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Our Little World ♥</title>
+<meta name="description" content="A private digital love story, made just for you." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app" class="screen-fade">
+
+  <!-- LOGIN -->
+  <main id="login" class="stage full">
+    <img src="love-bg.jpg" alt="" class="bg" />
+    <div class="overlay"></div>
+    <div class="floating"></div>
+    <form id="loginForm" class="glass card rise">
+      <div class="heartbeat big blush">♥</div>
+      <p class="tiny">A little place made just for you</p>
+      <h1 class="serif h1">Welcome, <span class="script" data-name></span></h1>
+      <p class="serif italic">There is something waiting for you inside...</p>
+      <input required placeholder="Your name" />
+      <input id="pw" type="password" placeholder="Secret password" />
+      <p id="err" class="serif italic blush hidden">Hmm... that's not the secret word ♡</p>
+      <button class="btn-rose">Open my heart ♡</button>
+    </form>
+  </main>
+
+  <!-- PROPOSAL -->
+  <main id="proposal" class="stage full hidden">
+    <img src="love-bg.jpg" alt="" class="bg" />
+    <div class="overlay"></div>
+    <div class="floating"></div>
+    <div class="center rise light">
+      <p class="serif italic lg">One tiny question...</p>
+      <h1 class="serif huge">Will you be mine<br /><span class="script blush huger">forever...?</span></h1>
+      <div class="row">
+        <button id="yes" class="btn-rose heartbeat">YES, ALWAYS ❤️</button>
+        <button id="no" class="glass btn-no">No</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- MAIN SITE -->
+  <div id="main" class="stage hidden">
+    <nav class="glass nav">
+      <a href="#home" class="script logo">our little world ♥</a>
+      <div class="links">
+        <a href="#home">Home</a><a href="#story">Our Story</a><a href="#album">Album</a><a href="#note">My Note</a><a href="#scan">Scan Me</a>
+      </div>
+    </nav>
+
+    <section id="home" class="full hero light">
+      <img id="parallax" src="love-bg.jpg" alt="" class="bg tall" />
+      <div class="overlay"></div>
+      <div class="floating"></div>
+      <div class="center">
+        <h1 class="serif huge rise">Hlo <span data-name></span>,<br /><span class="script blush huger">this is for you.</span></h1>
+        <div id="letter" class="serif italic lg rise" style="animation-delay:.4s"></div>
+        <a href="#story" class="glass pill">Come, let's remember ♡</a>
+      </div>
+    </section>
+
+    <section id="story" class="wrap">
+      <div class="reveal heading"><p class="script sub">Important little moments</p><h2 class="serif h2">Our story, one heartbeat at a time</h2></div>
+      <div id="timeline" class="timeline"></div>
+    </section>
+
+    <section id="album" class="wrap">
+      <div class="reveal heading"><p class="script sub">Moments I want to keep forever</p><h2 class="serif h2">Our little album</h2></div>
+      <div class="reveal row">
+        <label class="btn-rose">+ Add our photos<input id="albumInput" type="file" accept="image/*" multiple hidden /></label>
+        <button id="clearAlbum" class="btn-ghost hidden">Clear album</button>
+      </div>
+      <p id="albumEmpty" class="serif italic muted center-text">Our pages are waiting for their first memory ♡</p>
+      <div id="albumGrid" class="masonry"></div>
+    </section>
+
+    <section id="note" class="wrap narrow">
+      <div class="reveal heading"><p class="script sub" id="noteSub"></p><h2 class="serif h2" id="noteTitle"></h2></div>
+      <div class="reveal paper">
+        <span class="heartbeat blush big">♥</span>
+        <p id="noteText" class="serif italic lg"></p>
+        <p class="script sub">forever yours ♡</p>
+      </div>
+    </section>
+
+   <section id="scan" class="wrap center-text">
+  <p class="reveal tiny muted">One last little surprise</p>
+
+  <h2 class="reveal serif h1">
+    Scan me, <span class="script rose">baby ♡</span>
+  </h2>
+
+  <div class="reveal paper qr">
+    <img
+      id="qr"
+      src="qrcode.png"
+      alt="Scan me QR code"
+      width="240"
+      height="240"
+    />
+  </div>
+
+  <p class="reveal serif italic muted lg">
+    Scan this and discover one more little secret.
+  </p>
+
+  <p class="script sub" style="margin-top:4rem">
+    forever yours ♥
+  </p>
+</section>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
